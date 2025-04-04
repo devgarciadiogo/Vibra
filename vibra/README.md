@@ -1,4 +1,4 @@
-# 🎵 Projeto: Music App
+# 🎵 Projeto: Vibra
 
 ## 📌 Descrição
 
@@ -18,6 +18,7 @@ Este é um projeto de um webplayer de musica feito com **React**. O usuário pod
 
 - React
 - React Router (para navegação entre as páginas)
+- Context API (para gerenciamento de estado)
 - ESLint + Prettier (para código padronizado)
 - VS Code
 
@@ -26,6 +27,7 @@ Este é um projeto de um webplayer de musica feito com **React**. O usuário pod
 📂 src
 ┣ 📂 components → Componentes reutilizáveis
 ┣ 📂 pages → Páginas do aplicativo (Home, Login, Player)
+┣ 📂 context → Gerenciamento de estado global com Context API
 ┣ 📄 App.js → Arquivo principal
 ┣ 📄 index.js → Renderiza o app
 
@@ -42,6 +44,8 @@ npm start
 📅 Próximos Passos
 
 ✅ Implementar React Router para navegação
+
+✅ Criar a Context API para gerenciar o estado global do player
 
 Criar a tela de cadastro e login
 
