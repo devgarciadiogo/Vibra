@@ -10,6 +10,7 @@ Este é um projeto de um webplayer de musica feito com **React**. O usuário pod
 ✅ Reprodução de músicas com controle de volume e tempo  
 ✅ Listagem de playlists e organização de músicas  
 ✅ Criação de conta e login para salvar preferências  
+✅ Gerenciamento de autenticação e usuário com Context API  
 ✅ Favoritar músicas e criar playlists personalizadas  
 🔜 Modo "karaokê" (futuro)  
 🔜 Sugestões inteligentes de músicas (futuro)
@@ -47,7 +48,9 @@ npm start
 
 ✅ Criar a Context API para gerenciar o estado global do player
 
-Criar a tela de cadastro e login
+✅ Criar tela de Login com lógica de autenticação fake
+
+Criar a tela de cadastro
 
 Desenvolver o player de música
 
