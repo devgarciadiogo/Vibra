@@ -23,21 +23,13 @@ Este é um projeto de um webplayer de musica feito com **React**. O usuário pod
 - ESLint + Prettier (para código padronizado)
 - VS Code
 
-## 🏗 Estrutura do projeto
-
-📂 src
-┣ 📂 components → Componentes reutilizáveis
-┣ 📂 pages → Páginas do aplicativo (Home, Login, Player)
-┣ 📂 context → Gerenciamento de estado global com Context API
-┣ 📄 App.js → Arquivo principal
-┣ 📄 index.js → Renderiza o app
-
 ## ⚡ Como rodar o projeto
 
 1️⃣ Clone o repositório:
 
 ```sh
 git clone https://github.com/devgarciadiogo/Vibra.git
+cd Vibra
 npm install
 npm start
 ```
@@ -50,7 +42,7 @@ npm start
 
 ✅ Criar tela de Login com lógica de autenticação fake
 
-Criar a tela de cadastro
+✅ Criar a tela de cadastro
 
 Desenvolver o player de música
 

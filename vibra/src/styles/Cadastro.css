@@ -1,0 +1,48 @@
+/*Essa div vai envolver tudo na tela de Cadastro */
+.cadastro-container {
+    display: flex; /* Organiza os filhos em colunas */
+    flex-direction: column; 
+    align-items: center; /* Centraliza horizontalmente */
+    justify-content: center;
+    height: 100vh;
+    padding: 30px; /* Espaçamento interno */
+}
+
+/* Titulo "Cadastro" */
+.cadastro-container h2{
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #444;
+}
+
+/* Formulário */
+.cadastro-container form {
+    display: flex;
+    flex-direction: column;
+    width: 300px; /* Largura fixa pro forrm */
+}
+
+/* Inputs do formulário */
+.cadastro-container input{
+    margin-bottom: 15px; /* Espaço entre inputs */
+    padding: 10px;
+    font-size: 16px;
+    border:1px solid #ccc;
+    border-radius: 5px; /*Cantos arrendondados */
+}
+
+/* Botão de cadastrar */
+.cadastro-container button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #3f51b5; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer; 
+}
+
+/* Efeito quando passa o mouse no botão */
+.cadastro-container button:hover{
+    background-color: #303f9f;
+}

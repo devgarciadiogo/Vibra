@@ -2,11 +2,11 @@ import { useState, useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { UserContext } from '../context/UserContext'
 
-export default function login() {
+export default function Login() {
   const [email, setEmail] = useState('')
   const [senha, setSenha] = useState('')
   const { setUser } = useContext(UserContext)
-  const navigate = UseNavigate()
+  const navigate = useNavigate()
 
   function handleLogin(e) {
     e.preventDefault()
@@ -29,7 +29,7 @@ export default function login() {
           type="email"
           placeholder="Email"
           value={email}
-          onChange={(e) => setSenha(e.target.value)}
+          onChange={(e) => setEmail(e.target.value)}
         />
         <br />
         <button type="submit">Entrar</button>
