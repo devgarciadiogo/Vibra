@@ -1,6 +1,8 @@
 import { useState, useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { UserContext } from '../context/UserContext'
+import '../styles/Login.css'
+import { Link } from 'react-router-dom'
 
 export default function Login() {
   const [email, setEmail] = useState('')
@@ -22,7 +24,7 @@ export default function Login() {
   }
 
   return (
-    <div>
+    <div className="login-container">
       <h2>Login</h2>
       <form onSubmit={handleLogin}>
         <input
@@ -32,7 +34,17 @@ export default function Login() {
           onChange={(e) => setEmail(e.target.value)}
         />
         <br />
+        <input
+          type="password"
+          placeholder="Senha"
+          value={senha}
+          onChange={(e) => setSenha(e.target.value)}
+        />
+        <br />
         <button type="submit">Entrar</button>
+        <p style={{ marginTop: '10px' }}>
+          Não tem conta ? <Link to="Cadastro">Cadastre-se</Link>
+        </p>
       </form>
     </div>
   )

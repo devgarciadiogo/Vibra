@@ -2,6 +2,7 @@ import { useState, useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { UserContext } from '../context/UserContext'
 import '../styles/Cadastro.css'
+import { Link } from 'react-router-dom'
 
 export default function Cadastro() {
   //Criação dos estados para os campos do formulario
@@ -56,8 +57,10 @@ export default function Cadastro() {
           onChange={(e) => setSenha(e.target.value)}
         />
         <br />
-
         <button type="submit">Cadastrar</button>
+        <p>
+          Ja tem conta ? <Link to="/login">Faça Login</Link>
+        </p>
       </form>
     </div>
   )
