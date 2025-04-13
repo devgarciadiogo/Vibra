@@ -16,6 +16,7 @@ Este é um projeto de um webplayer de musica feito com **React**. O usuário pod
 ✅ Salvamento de dados no `localStorage` para manter usuário logado  
 ✅ Alertas de login bem-sucedido ou erro  
 ✅ Alertas de cadastro bem-sucedido ou erro  
+✅ Mensagem personalizada de boas-vindas para usuário logado na Home  
 🔜 Modo "karaokê" (futuro)  
 🔜 Sugestões inteligentes de músicas (futuro)
 

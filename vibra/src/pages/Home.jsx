@@ -1,5 +1,19 @@
+import { useContext } from 'react'
+import { UserContext } from '../context/UserContext'
+import '../styles/Home.css'
+
 function Home() {
-  return <h1>Página Inicial</h1>
+  const { user } = useContext(UserContext)
+
+  return (
+    <div className="home-container">
+      {user ? (
+        <h1>Bem-vindo(a), {user.nome}!</h1>
+      ) : (
+        <h1>Bem-vindo ao Vibra 🎵</h1>
+      )}
+    </div>
+  )
 }
 
 export default Home

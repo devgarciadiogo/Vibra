@@ -9,7 +9,7 @@ export function UserProvider({ children }) {
 
   useEffect(() => {
     const usuarioSalvo = localStorage.getItem('usuario')
-    if (usarioSalvo) {
+    if (usuarioSalvo) {
       setUser(JSON.parse(usuarioSalvo))
     }
   })
