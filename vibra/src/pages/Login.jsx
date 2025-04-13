@@ -7,7 +7,8 @@ import { Link } from 'react-router-dom'
 export default function Login() {
   const [email, setEmail] = useState('')
   const [senha, setSenha] = useState('')
-  const { setUser } = useContext(UserContext)
+  const [alertMessage, setAlertMessage] = useState('') // Definir o estado para a mensagem de alerta
+  const { user, setUser } = useContext(UserContext)
   const navigate = useNavigate()
 
   // Verifica se o usuário já está logado, se sim, redireciona para a página inicial
@@ -23,7 +24,7 @@ export default function Login() {
 
     //Verifica se o email e senha foram preenchidos corretamente
 
-    if (email && email) {
+    if (email && senha) {
       const usuarioFake = {
         nome: 'Usuario Teste',
         email: email,

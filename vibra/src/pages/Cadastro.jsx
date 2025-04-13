@@ -8,6 +8,7 @@ export default function Cadastro() {
   //Criação dos estados para os campos do formulario
   const [nome, setNome] = useState('')
   const [email, setEmail] = useState('')
+  const [alertMessage, setAlertMessage] = useState('') // Defina o estado alertMessage
   const [senha, setSenha] = useState('')
 
   // Pega o método setUser do contexto global
