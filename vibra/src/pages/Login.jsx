@@ -1,4 +1,4 @@
-import { useState, useContext } from 'react'
+import { useState, useContext, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { UserContext } from '../context/UserContext'
 import '../styles/Login.css'
@@ -10,22 +10,39 @@ export default function Login() {
   const { setUser } = useContext(UserContext)
   const navigate = useNavigate()
 
+  // Verifica se o usuário já está logado, se sim, redireciona para a página inicial
+
+  useEffect(() => {
+    if (user) {
+      navigate('/') //Redireciona para home
+    }
+  }, [user, navigate])
+
   function handleLogin(e) {
     e.preventDefault()
 
-    //Simuala um login bem sucedido
-    const usuarioFake = {
-      nome: 'Usuario Teste',
-      email: email,
-    }
+    //Verifica se o email e senha foram preenchidos corretamente
 
-    setUser(usuarioFake) //Salva o usuario no contexto
-    navigate('/') // Redireciona para a home
+    if (email && email) {
+      const usuarioFake = {
+        nome: 'Usuario Teste',
+        email: email,
+      }
+
+      setUser(usuarioFake) //Salva o usuario no contexto
+      localStorage.setItem('usuario', JSON.stringify(usuarioFake)) //Salva no localStorage
+      setAlertMessage('Login bem-sucedido') //Define a mensagem de sucesso
+      navigate('/') // Redireciona para a home
+    } else {
+      setAlertMessage('Por favor, preencha todos os campos') //Mensagem de erro
+    }
   }
 
   return (
     <div className="login-container">
       <h2>Login</h2>
+      {alertMessage && <div className="alert">{alertMessage}</div>}{' '}
+      {/*Exibe a mensagem de alerta */}
       <form onSubmit={handleLogin}>
         <input
           type="email"
@@ -43,7 +60,7 @@ export default function Login() {
         <br />
         <button type="submit">Entrar</button>
         <p style={{ marginTop: '10px' }}>
-          Não tem conta ? <Link to="Cadastro">Cadastre-se</Link>
+          Não tem conta ? <Link to="/Cadastro">Cadastre-se</Link>
         </p>
       </form>
     </div>

@@ -20,19 +20,26 @@ export default function Cadastro() {
   function handleCadastro(e) {
     e.preventDefault()
 
-    //Simula a criação de usuário
-    const novoUsuario = {
-      nome,
-      email,
+    //Verifica se todos os campos foram preenchidos corretamente
+    if (nome && email && senha) {
+      const novoUsuario = {
+        //Cria um novo usuário
+        nome,
+        email,
+      }
+      setUser(novoUsuario) //Salva o usuário no contexto
+      setAlertMessage('Cadastro realizado com sucesso') //Define a mensagem de sucesso
+      navigate('/') // Redireciona para a pagina Home
+    } else {
+      setAlertMessage('Por favor, preencha todos os campos') //Mensagem de erro
     }
-
-    setUser(novoUsuario) //Salva o usuário no contexto
-    navigate('/') // Redireciona para a pagina Home
   }
 
   return (
     <div className="cadastro-container">
       <h2>Cadastro</h2>
+      {/* Exibe a mensagem de alerta */}
+      {alertMessage && <div className="alert">{alertMessage}</div>}{' '}
       <form onSubmit={handleCadastro}>
         <input
           type="text"
